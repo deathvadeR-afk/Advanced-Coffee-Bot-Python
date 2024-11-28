@@ -38,7 +38,7 @@ def get_drink_type():
   elif res == 'c':
     return order_latte()
   elif res == 'd':
-    return 'expresso'
+    return order_espresso()
   else:
     print_message()
     return get_drink_type()
@@ -52,6 +52,17 @@ def order_mocha():
       return 'peppermint mocha'
     elif res == 'b':
       return 'mocha'
+
+    print_message()
+
+def order_espresso():
+  while True:
+    res = input('Would you like to try our Americano or Cappuccino? \n[a] Americano! \n[b] Cappuccino! \n> ')
+
+    if res == 'a':
+      return 'Americano'
+    elif res == 'b':
+      return 'Cappuccino'
 
     print_message()
 
